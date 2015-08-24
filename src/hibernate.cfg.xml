@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/saopaulobd?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
+    <mapping class="uem.poo.sistema.escola.modelo.Pessoa"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Endereco"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Cidade"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Distrito"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Bairro"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Aluno"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Instituicao"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Fundos"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Despesa"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Fornecedor"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Requesicao"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Funcionario"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Contrato"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Cargo"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Imposto"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Parente"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Encarregado"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Exame"/>
+    <mapping class="uem.poo.sistema.escola.modelo.ExameAluno"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Disciplina"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Aproveitamento"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Matricula"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Classe"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Seccao"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Deque"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Turma"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Sala"/>
+    <mapping class="uem.poo.sistema.escola.modelo.DirectorTurma"/>
+    <mapping class="uem.poo.sistema.escola.modelo.AnoLetivo"/>
+
+  </session-factory>
+</hibernate-configuration>
