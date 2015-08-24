@@ -8,6 +8,8 @@ package uem.poo.sistema.escola.modelo;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -18,6 +20,7 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Trimestre implements Serializable{
+    @Id @GeneratedValue
     private Long codigo;
     private String trimestre;
     

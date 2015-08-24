@@ -39,6 +39,7 @@
     <mapping class="uem.poo.sistema.escola.modelo.Sala"/>
     <mapping class="uem.poo.sistema.escola.modelo.DirectorTurma"/>
     <mapping class="uem.poo.sistema.escola.modelo.AnoLetivo"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Trimestre"/>
 
   </session-factory>
 </hibernate-configuration>
