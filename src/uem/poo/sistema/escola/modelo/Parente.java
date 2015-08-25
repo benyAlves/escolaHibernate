@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -39,6 +40,9 @@ public class Parente implements Serializable{
     joinColumns={@JoinColumn(name="cod_parente")},
     inverseJoinColumns={@JoinColumn(name="cod_aluno")})
     private List<Aluno> alunos;
+    
+    @OneToMany(mappedBy = "parente")    
+    private List<Telefone> telefones;
 
     public Long getCodigo() {
         return codigo;
@@ -88,5 +92,23 @@ public class Parente implements Serializable{
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
+    
+    
     
 }

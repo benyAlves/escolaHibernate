@@ -8,6 +8,7 @@ package uem.poo.sistema.escola.modelo;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,7 @@ import javax.persistence.OneToMany;
  *
  * @author maluleque
  */
-@MappedSuperclass
+@Entity
 public class Utilizador implements  Serializable{
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long codigo;
@@ -33,17 +34,15 @@ public class Utilizador implements  Serializable{
     @Column(nullable = false,unique = false)
     private String senha;
     private String estado;
-    @OneToMany(mappedBy = "utilizador")
-    private List<Telefone> telefones;
     
     @OneToMany(mappedBy = "utilizador")
     private List<Expediente> expedientes;
     
     @OneToMany(mappedBy = "utilizador")
     private List<Ocorrencia> ocorrencias;
-
+//
     @ManyToMany(fetch=FetchType.LAZY)
-    @JoinTable(name="Utilizador_Previlegio",
+    @JoinTable(name="UtilizadorPrevilegio",
     joinColumns={@JoinColumn(name="cod_utilizador")},
     inverseJoinColumns={@JoinColumn(name="cod_previlegio")})
     private List<Previlegio> previlegios;

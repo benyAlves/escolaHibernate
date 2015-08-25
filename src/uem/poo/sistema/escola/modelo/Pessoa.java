@@ -30,6 +30,8 @@ public class Pessoa implements Serializable{
     private String outrosNomes;
     @Column(nullable = false)
     private String nacionalidade;
+    @Column(nullable = false)
+    private String naturalidade;
     @Column(name = "nr_bi", nullable = false)
     private String nrBi;
     @Column(name = "email", nullable = true)
@@ -40,6 +42,14 @@ public class Pessoa implements Serializable{
     @Column(name = "data_nascimento", nullable = false)
     private Date dataNascimento;
 
+    public String getNaturalidade() {
+        return naturalidade;
+    }
+
+    public void setNaturalidade(String naturalidade) {
+        this.naturalidade = naturalidade;
+    }
+    
     public Long getCodigo() {
         return codigo;
     }

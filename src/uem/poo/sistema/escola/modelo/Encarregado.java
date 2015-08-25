@@ -7,12 +7,18 @@ package uem.poo.sistema.escola.modelo;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -34,8 +40,14 @@ public class Encarregado implements Serializable{
     @Column(name = "tipo", nullable = false)
     private String tipo;
     
-    @OneToMany(mappedBy = "encarregado")
+    @ManyToMany(fetch=FetchType.LAZY)
+    @JoinTable(name="EncarregadoAluno",
+    joinColumns={@JoinColumn(name="cod_encarregado")},
+    inverseJoinColumns={@JoinColumn(name="cod_aluno")})
     private List<Aluno> alunos;
+    
+    @OneToMany(mappedBy = "encarregado")    
+    private List<Telefone> telefones;
 
     public String getTipo() {
         return tipo;
@@ -92,6 +104,12 @@ public class Encarregado implements Serializable{
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
     }
-    
-    
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
 }

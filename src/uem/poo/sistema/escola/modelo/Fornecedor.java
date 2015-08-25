@@ -38,8 +38,8 @@ public class Fornecedor implements Serializable{
     @JoinColumn(name = "cod_endereco", nullable = false)
     private Endereco endereco;
     
-//    @OneToMany(mappedBy = "fornecedor")
-//    private List<Telefone> telefones;
+    @OneToMany(mappedBy = "fornecedor")
+    private List<Telefone> telefones;
 
      //Fornecedor Despesa
     @ManyToMany(fetch=FetchType.LAZY)

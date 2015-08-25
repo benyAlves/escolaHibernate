@@ -15,7 +15,7 @@ import uem.poo.sistema.escola.modelo.Aluno;
 public class AlunoDao extends GenericDao<Aluno>{
     
     public void guardarAluno(Aluno aluno){
-       if(aluno != null){//o codigo nao foi criado porque????? necessario para continuar
+       if(aluno.getCodigo() != null){
            actualizar(aluno);
        }else{
            guardar(aluno);

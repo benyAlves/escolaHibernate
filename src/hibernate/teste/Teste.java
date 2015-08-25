@@ -8,7 +8,6 @@ package hibernate.teste;
 import hibernate.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import uem.poo.sistema.escola.modelo.Turma;
 
 /**
  *
@@ -17,12 +16,10 @@ import uem.poo.sistema.escola.modelo.Turma;
 public class Teste {
 
     public static void main(String[] args) {
-        Session s = HibernateUtil.getSessionFactory().openSession();
-        Transaction t = s.beginTransaction();
-        //Transaction t = sess.beginTransaction();
-       
-        //t.commit();
-        t.commit();
-        s.close();
+            Session s = HibernateUtil.getSessionFactory().openSession();
+            Transaction t = s.beginTransaction();
+            
+            t.commit();
+            s.close();
     }
 }

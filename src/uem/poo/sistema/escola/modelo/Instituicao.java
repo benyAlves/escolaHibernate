@@ -40,8 +40,8 @@ public class Instituicao implements  Serializable{
   @OneToOne
   @JoinColumn(name = "cod_endereco")
   private Endereco endereco;
-//  @OneToMany(mappedBy = "instituicao")
-//  private List<Telefone> telefone;
+  @OneToMany(mappedBy = "instituicao")
+  private List<Telefone> telefones;
   
     @OneToMany(mappedBy = "instituicao")
     private List<Despesa> despesas;

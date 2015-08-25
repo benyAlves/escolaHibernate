@@ -19,6 +19,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -45,6 +46,9 @@ public class Funcionario implements Serializable{
     @ManyToOne
     @JoinColumn(name = "cod_cargo", nullable = false)
     private Cargo cargo;
+    
+    @OneToMany(mappedBy = "funcionario")    
+    private List<Telefone> telefones;
     
     @ManyToMany(fetch=FetchType.LAZY)
     @JoinTable(name= "Contrato",

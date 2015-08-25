@@ -9,7 +9,6 @@
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="uem.poo.sistema.escola.modelo.Pessoa"/>
     <mapping class="uem.poo.sistema.escola.modelo.Endereco"/>
     <mapping class="uem.poo.sistema.escola.modelo.Cidade"/>
@@ -40,5 +39,10 @@
     <mapping class="uem.poo.sistema.escola.modelo.DirectorTurma"/>
     <mapping class="uem.poo.sistema.escola.modelo.AnoLetivo"/>
     <mapping class="uem.poo.sistema.escola.modelo.Trimestre"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Utilizador"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Previlegio"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Expediente"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Ocorrencia"/>
+    <mapping class="uem.poo.sistema.escola.modelo.Telefone"/>
   </session-factory>
 </hibernate-configuration>

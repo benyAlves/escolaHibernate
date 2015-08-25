@@ -32,9 +32,6 @@ public class Telefone implements Serializable{
    @JoinColumn(name = "cod_instituicao",nullable = true)
    private Instituicao instituicao;
    
-   @ManyToOne
-   @JoinColumn(name = "cod_utilizador",nullable = true)
-   private Utilizador utilizador;
 
    @ManyToOne
    @JoinColumn(name = "cod_fornecedor",nullable = true)

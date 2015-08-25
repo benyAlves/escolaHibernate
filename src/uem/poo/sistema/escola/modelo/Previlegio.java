@@ -28,7 +28,7 @@ public class Previlegio implements Serializable{
     private int nrPrevilegio;
     
     @ManyToMany(fetch=FetchType.LAZY)
-    @JoinTable(name= "Utilizador_Previlegio",
+    @JoinTable(name= "UtilizadorPrevilegio",
     joinColumns={@JoinColumn(name= "cod_previlegio")},
     inverseJoinColumns={@JoinColumn(name= "cod_utilizador")})
     private List<Utilizador> utilizadores;
